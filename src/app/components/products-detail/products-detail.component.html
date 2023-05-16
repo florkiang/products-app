@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-header bg-info text-white">
+    <h5>Products details for {{product.title}}</h5>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row mb-3">
+          <div class="col-md-3">Id</div>
+          <div class="col-md-6">{{product.id}}</div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-3">Name</div>
+          <div class="col-md-6">{{product.title}}</div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-3">Unit price</div>
+          <div class="col-md-6 text-danger fw-bold">{{product.unitPrice}}</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img src="https://placehold.co/150x150" class="img-fluid rounded-top" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="offset-1 col-md-10 d-grid gap-2 mt-1">
+  <button type="button" name="" id="" class="btn btn-primary"  (click)="addProductToCart()">Add to card</button>
+</div>
