@@ -11,6 +11,12 @@ import { ProductsDetailComponent } from './components/products-detail/products-d
 import { ProductsAddComponent } from './components/products-add/products-add.component';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { environment } from '../environments/environment';
+import { WishListComponent } from './components/wish-list/wish-list.component';
+import { AddWishComponent } from './components/add-wish/add-wish.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,13 +25,17 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
     ProductsListComponent,
     ProductsPromotionsComponent,
     ProductsDetailComponent,
-    ProductsAddComponent
+    ProductsAddComponent,
+    WishListComponent,
+    AddWishComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, // for firestore
   ],
   providers: [],
   bootstrap: [AppComponent]

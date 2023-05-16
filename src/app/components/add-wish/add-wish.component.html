@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-header bg-info text-white">
+    <h5>Wish Form (Reactive)</h5>
+  </div>
+  <div class="card-body">
+  <div class="row">
+    <form   class=" col-md-6"  [formGroup]="wishForm"  (ngSubmit)="addWish()">
+      <div class="mb-3">
+        <label for="wishTitle"
+               class="form-label">Title</label>
+        <input type="text"
+        formControlName="title" class="form-control" id="wishTitle">
+        <div *ngIf="wishForm.get('title')?.touched && wishForm.get('title')?.invalid"
+               class="text-danger">ths title is required</div>
+      </div>
+      <div class="mb-3">
+        <label for="wishMarque"
+               class="form-label">Marque</label>
+        <input type="string" formControlName="marque"
+                class="form-control" id="wishMarque">
+      </div>
+      <div class="mb-3">
+        <label for="wishLien"
+               class="form-label">Lien</label>
+        <input type="string" formControlName="lien"
+                class="form-control" id="wishLien">
+      </div>
+      <div class="mb-3">
+        <label for="wishImage"
+               class="form-label">Image</label>
+        <input type="string" formControlName="image"
+                class="form-control" id="wishImage">
+      </div>
+      <button type="submit" class="btn btn-primary" >Add To Wish</button>
+    </form>
+
+  </div>
+  </div>
+
+</div>

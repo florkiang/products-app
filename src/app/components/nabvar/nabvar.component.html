@@ -11,12 +11,14 @@
           <a class="nav-link active" href="#" aria-current="page">Catalogue <span class="visually-hidden">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" active href="#">Promotions</a>
+          <a class="nav-link" active [routerLink]="['/wishes']" routerLinkActive="router-link-active" >Wishes</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" active [routerLink]="['/addProduct']" routerLinkActive="router-link-active" >Add Product</a>
         </li>
-
+        <li class="nav-item">
+          <a class="nav-link" active [routerLink]="['/addWish']" routerLinkActive="router-link-active" >Add Wish</a>
+        </li>
       </ul>
       <ul class="navbar-nav me-2 mt-2 mt-lg-0">
         <li class="nav-item"><i class="bi bi-cart"></i> <span class="badge bg-success">{{length}}</span></li>
